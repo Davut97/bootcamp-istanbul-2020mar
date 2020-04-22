@@ -39,6 +39,7 @@ while (cur < 4000000) {
   }
 }
 console.log(total);
+<<<<<<< HEAD
 */
 
 function societyName(arr) {
@@ -68,3 +69,37 @@ chatroomStatus([]);
 chatroomStatus(['Liz']);
 chatroomStatus(['Liz', 'Ammar']);
 chatroomStatus(['Liz', 'Hakan', 'Ammar', 'Feras', 'Jaime', 'Derya']);
+||||||| 773714e
+=======
+<<<<<<< HEAD
+=======
+*/
+
+function societyName(arr) {
+  let temp = [];
+  arr.forEach((element) => {
+    temp.push(element.charAt('0'));
+    temp.sort();
+  });
+  let str = temp.join('');
+  console.log(str);
+}
+
+societyName(['Adam', 'Sarah', 'Malcolm']);
+
+let str = function chatroomStatus(param) {
+  if (param.length === 0) {
+    return 'no one online';
+  } else if (param.length === 1) {
+    return `${param[0]}, is online`
+  } else if (param.length === 2) {
+    return `${param[0]}, and ${param[1]} is online`
+  } else {
+    re`${param[0]},  ${param[1]} and ${param.length - 2} more online`);
+  }
+};
+chatroomStatus([]);
+chatroomStatus(['Liz']);
+chatroomStatus(['Liz', 'Ammar']);
+chatroomStatus(['Liz', 'Hakan', 'Ammar', 'Feras', 'Jaime', 'Derya']);
+>>>>>>> upstream/master
