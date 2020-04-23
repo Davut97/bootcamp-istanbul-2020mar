@@ -137,6 +137,7 @@ function handleUserInput(event) {
 /*******************************Event enter ********************** */
 document.addEventListener('keydown', (e) => {
   if (e.keyCode === 13) {
+    changeColor(e);
     let allInputs = document.querySelectorAll('.allInputs');
     let inputs = [...allInputs];
     let currentInputIndex = inputs.indexOf(e.target);
