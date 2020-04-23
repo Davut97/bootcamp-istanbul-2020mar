@@ -147,6 +147,12 @@ p {
     overflow: scroll;
   }
 }
+@media only screen and (max-height: 750px) {
+  .input,
+  .story {
+    overflow: scroll;
+  }
+}
 
 /*
 1-live update 
