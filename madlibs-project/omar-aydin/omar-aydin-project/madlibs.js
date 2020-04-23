@@ -77,7 +77,7 @@ CheckNVA = (el) => {
   }
 };
 /****************************Create output and words************************ */
- createOutputFields = (id, el) => {
+createOutputFields = (id, el) => {
   let story2 = document.getElementById('output');
   let space = document.createElement('SPAN');
   let s = document.createElement('SPAN');
@@ -89,7 +89,7 @@ CheckNVA = (el) => {
   story2.appendChild(space);
   s.style.color = 'red';
 };
- createOutputWords = (id, el) => {
+createOutputWords = (id, el) => {
   let story2 = document.getElementById('output');
   let s = document.createElement('SPAN');
   let t = document.createTextNode(`${el.word} `);
@@ -111,7 +111,7 @@ createInputFields = (el) => {
   i++;
   return newElement;
 };
- CreateInputWords = (el) => {
+CreateInputWords = (el) => {
   let mid = document.getElementById('printInput');
   let s = document.createElement('SPAN');
   let t = document.createTextNode(`${el.word} `);
@@ -137,7 +137,6 @@ function handleUserInput(event) {
 /*******************************Event enter ********************** */
 document.addEventListener('keydown', (e) => {
   if (e.keyCode === 13) {
-    changeColor(e);
     let allInputs = document.querySelectorAll('.allInputs');
     let inputs = [...allInputs];
     let currentInputIndex = inputs.indexOf(e.target);
@@ -151,12 +150,28 @@ document.addEventListener('keydown', (e) => {
     }
   }
 });
+document.addEventListener('click', (e) => {
+  let allInputs = document.querySelectorAll('.allInputs');
+  let inputs2 = [...allInputs];
+  let currentInputIndex = inputs2.indexOf(e.target);
+  if (currentInputIndex === 0) {
+  } else {
+    if (inputs2[currentInputIndex - 1].value.length > 0) {
+      console.log(inputs2[currentInputIndex - 1].id);
+      let outputId = inputs2[currentInputIndex - 1].id.replace('input', 'output');
+      let output = document.getElementById(outputId);
+      output.style.color = 'aqua';
+    }
+  }
+});
 function changeColor(event) {
   const id = event.target.id;
   const value = event.target.value;
-  const outputId = id.replace('input', 'output');
-  const output = document.getElementById(outputId);
-  output.style.color = 'aqua';
+  if (value.length > 0) {
+    const outputId = id.replace('input', 'output');
+    const output = document.getElementById(outputId);
+    output.style.color = 'aqua';
+  }
 }
 getRawStory()
   .then(parseStory)
