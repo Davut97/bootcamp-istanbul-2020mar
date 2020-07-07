@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    font-family: 'Lato';
+}
+header{
+    height: 100vh;
+    width: 100%;
+    background-color: #53A2BE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.row{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
+   
+
+}
+
+.input , 
+.story{
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 15;
+}
+
+
+h1{
+    color: #0A2239;
+    font-size: 40px;
+    z-index: 10;
+}
+.input{
+    padding: 20px;
+}
+input{
+    border: none;
+    border-bottom: 2px solid black;
+    width: 50px;
+}
+
+input:focus{
+    border-bottom: 3px solid blue;
+    outline: none;
+
+}
+
+p{
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+}
+
+/***************/
+
+.shape1{
+    position: absolute;
+    width: 227px;
+    height: 222px;
+    left: -71px;
+    top: -70px;
+    border-radius: 50%;
+    border: 32px solid #176087;
+}
+
+.shape2{
+    position: absolute;
+    width: 441px;
+    height: 431px;
+    right: -110px;
+    top: -150px;
+    border-radius: 50%;
+    border: 82px solid #0A2239;
+}
+
+.shape3{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 290px;
+    bottom: -70px;
+    border-radius: 50%;
+    border: 72px solid #176087;
+}
+
+.shape4{
+    position: absolute;
+    width: 333px;
+    height: 333px;
+    left: 330px;
+    top: 50px;
+    border-radius: 50%;
+    background: #53A2BE;
+    box-shadow: -7px 0px 60px rgba(0, 0, 0, 0.25), 19px 14px 31px rgba(0, 0, 0, 0.25);
+}
+
+.shape5{
+    position: absolute;
+    width: 333px;
+    height: 333px;
+    right: 330px;
+    bottom: 40px;
+    border-radius: 50%;
+    background: #53A2BE;
+    box-shadow: -7px 0px 60px rgba(0, 0, 0, 0.25), 8px -6px 31px rgba(0, 0, 0, 0.25);
+}
+
+
+/**********Resposive*************/
+
+/*
+1-live update 
+2-resposive
+3-[n] [v] [a]
+4-hotkeys 
+5- focus 3 types
+*/
+
+/*
+exrta
+1- type effect 
+2- animation 
+3- random stories 
+*/

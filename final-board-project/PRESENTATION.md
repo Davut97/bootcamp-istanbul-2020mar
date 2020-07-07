@@ -26,7 +26,7 @@ Github repo, follow the instructions, and it should just work.
 
 [Netlify](https://app.netlify.com/signup)
 
-# ## Pull request
+### Pull request
 Finally, please pull request, when you are finished, your project to a
 subdirectory of this directory.
 
